@@ -17,7 +17,7 @@ public class IMBDSearchPage {
     //(//ul[@role='presentation'])[1]
     //a[@class='sc-ksltVi jUkjoZ searchResult searchResult--const'])[2]
     By searchBox = By.id("suggestion-search");
-    By firstTitle = By.xpath("//ul[@role='presentation'][1]//li");
+    By firstTitle = By.xpath("(//div[@class='sc-b03627f1-2 gWHDBT'])[1]//a");
 
     public void searchMovie(String movie) {
         WebElement movieName = driver.findElement(searchBox);
@@ -25,9 +25,8 @@ public class IMBDSearchPage {
         movieName.submit();
 
         List<WebElement> allMovies = driver.findElements(firstTitle);
-        Optional<WebElement> matchingResult = allMovies.stream().filter(webElement -> webElement.getText().toLowerCase().contains("matrix")).findFirst();
+        Optional<WebElement> matchingResult = allMovies.stream().filter(webElement -> webElement.getText().toLowerCase().contains(movie)).findFirst();
 
         matchingResult.ifPresent(WebElement::click);
-
     }
 }
