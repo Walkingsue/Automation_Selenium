@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class test {
     WebDriver driver;
-    String wantedMovie = "The Matrix Resurrections";
+    String wantedMovie = "300";
 
     @BeforeTest
     public void beforeTest() {

@@ -25,7 +25,7 @@ public class MoviePage {
         String titleText;
         List<WebElement> ogTitle = mainTitle.findElements(By.xpath(".//div"));
         if(ogTitle.isEmpty()) {
-            titleText = mainTitle.getText().trim();
+            titleText = mainTitle.findElement(By.tagName("h1")).getText().trim();
         } else {
             titleText = ogTitle.get(0).getText().split(":")[1];
         }
