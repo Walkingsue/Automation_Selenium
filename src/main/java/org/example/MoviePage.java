@@ -10,7 +10,9 @@ import java.util.stream.Collectors;
 public class MoviePage {
     WebDriver driver;
 
-    By title = By.xpath("(//div[@class='sc-70a366cc-0 bxYZmb'])/div");
+    //(//div[@class='sc-70a366cc-0 bxYZmb'])/div
+    //(//ul[@role='presentation'])[1]
+    By titleContainer = By.xpath("//div[@class='sc-70a366cc-0 bxYZmb']");
     By rating = By.xpath("//div[contains(@data-testid,'hero-rating-bar__aggregate-rating__score')]");
     By Genre = By.xpath("//div[@class='ipc-chip-list__scroller']//a");
 
@@ -19,8 +21,15 @@ public class MoviePage {
     }
 
     public String movieTitle() {
-        WebElement movieNameLocation = driver.findElement(title);
-        return movieNameLocation.getText().split(":")[1];
+        WebElement mainTitle = driver.findElement(titleContainer);
+        String titleText;
+        List<WebElement> ogTitle = mainTitle.findElements(By.xpath(".//div"));
+        if(ogTitle.isEmpty()) {
+            titleText = mainTitle.getText().trim();
+        } else {
+            titleText = ogTitle.get(0).getText().split(":")[1];
+        }
+        return titleText;
     }
 
     public String movieRating() {

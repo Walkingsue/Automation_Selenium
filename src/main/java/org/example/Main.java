@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        String movieName = "fast & furious";
+        String movieName = "rapidos y furiosos";
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         // Ir a la pagina IMBD
@@ -24,8 +24,6 @@ public class Main {
         MoviePage movie = new MoviePage(driver);
         String movieTitle = movie.movieTitle();
         saveFile("Titulo original: " + movieTitle, "src/output/resultado_test1.txt");
-        //Imprimir el nombre de la pelicula
-        //saveFile(movieTitle, "src/output/resultado_test1.txt");
 
         //Conseguir el rating
         String rating = movie.movieRating();
