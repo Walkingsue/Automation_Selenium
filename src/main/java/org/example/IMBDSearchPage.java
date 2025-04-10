@@ -24,8 +24,9 @@ public class IMBDSearchPage {
         movieName.sendKeys(movie);
         movieName.submit();
 
+        String m = movie.toLowerCase();
         List<WebElement> allMovies = driver.findElements(firstTitle);
-        Optional<WebElement> matchingResult = allMovies.stream().filter(webElement -> webElement.getText().toLowerCase().contains(movie)).findFirst();
+        Optional<WebElement> matchingResult = allMovies.stream().filter(webElement -> webElement.getText().toLowerCase().contains(m)).findFirst();
 
         matchingResult.ifPresent(WebElement::click);
     }

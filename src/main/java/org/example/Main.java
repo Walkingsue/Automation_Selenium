@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        String movieName = "rapidos y furiosos";
+        String movieName = "El club de la pelea";
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         // Ir a la pagina IMBD
