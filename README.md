@@ -1,3 +1,5 @@
+El objetivo de este proyecto es demostrar mis habilidades en la automatizacion de  la UI mediante el uso de la herramienta Selenium con el lenguaje de programacion JAVA
+
 🎬 IMDb Movie Info Scraper
 Este proyecto automatiza la búsqueda de información de películas en IMDb utilizando Java, Selenium WebDriver, y JUnit/TestNG.
 
