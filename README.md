@@ -58,14 +58,10 @@ webdrivermanager (opcional pero recomendado)
 
 Ejecuta las pruebas:
 
-bash
-Copiar
-Editar
 mvn test
+
 🧪 Ejemplo de uso
-java
-Copiar
-Editar
+
 IMDbSearchPage page = new IMDbSearchPage(driver);
 page.searchMovie("The Matrix");
 String title = page.movieTitle();
