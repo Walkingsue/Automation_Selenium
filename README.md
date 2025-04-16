@@ -43,9 +43,6 @@ src/
 📦 Instalación
 Clona el repositorio:
 
-bash
-Copiar
-Editar
 git clone https://github.com/Walkingsue/Automation_Selenium.git
 cd tu-repo-imdb
 Asegúrate de tener Maven instalado y configura el pom.xml con las dependencias necesarias:
@@ -72,12 +69,10 @@ resultado_test2.txt
 
 Ejemplo:
 
-vbnet
-Copiar
-Editar
 Title: The Matrix
 The rating is: 8.7/10
 Generos: Action, Sci-Fi
+
 ⚠️ Notas
 Asegúrate de tener el chromedriver compatible con tu versión de Chrome.
 
