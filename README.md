@@ -32,15 +32,25 @@ Maven (recomendado)
 🧰 Estructura del Proyecto
 src/
 ├── main/
+
 │   └── java/
+
 │       └── imdb/
+
 │           └── org.example/
+
 │               └── IMDbSearchPage.java
+
 |               └── MoviePage.java
+
 |               └── Main.java
+
 ├── test/
+
 │   └── java/
+
 │           └── Test.java
+
 
 📦 Instalación
 Clona el repositorio:
